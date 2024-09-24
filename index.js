@@ -1,3 +1,6 @@
+const prompt = require('prompt-sync');
+const entrada = prompt();
+
 const nomeCompleto = "Bruno Gomes Damasio";
 const anoNascimento = 2006;
 let anoAtual = 2024;
@@ -25,10 +28,14 @@ console.log(listaDeViagens);
 
 listaDeViagens.splice(3,1);
 
-const idadeComprador = 24;
+var nomeComprador = entrada("Qual seu nome?");
+var idadeComprador = entrada("Qual sua idade?");
+
 if (idadeComprador<18){
-console.log("Infelizmente você é menor de idade e não pode comprar a passagem")
-}
-if (idadeComprador>=19){
-  console.log("Párabens,você é apto à viajar,para onde deseja ir?")
+  
+console.log(`Olá senhor(a) ${nomeComprador} infelizmente você não poderá viajar conosco`);
+  console.log(`Já que sua idade é ${idadeComprador}`)
+};
+if (idadeComprador>=18){
+  console.log(`Párabens senhor(a) ${nomeComprador} ,você é apto à viajar,para onde deseja ir? Os destinos são ${listaDeViagens}`);
 }
